@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repon Kumar Roy | Software Engineer</title>
+    <meta name="description"
+        content="Portfolio of Repon Kumar Roy, a Software Engineer at Google, specializing in C++, Systems, and Distributed Infrastructure.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Repon Kumar Roy</a>
+            <nav class="navbar">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#awards" class="nav-link">Awards</a>
+            </nav>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="greeting">Software Engineer</span>
+                    <h1 class="name">Repon Kumar Roy</h1>
+                    <p class="hero-desc">
+                        Software Engineer at <strong>Google</strong> based in Zurich. <br>
+                        Specializing in <strong>Distributed Systems</strong>, <strong>C++</strong>, and
+                        <strong>High-Performance Computing</strong>.
+                        Previously at WorldQuant and Grab.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/repon-kumar-roy" target="_blank" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/kowshikRoy" target="_blank" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="mailto:reponk.roy@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <!-- Google -->
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <h3 class="role">Software Engineer</h3>
+                            <span class="company">Google Switzerland GmbH</span>
+                            <span class="date">April 2022 - Present</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Currently working in <strong>Google Trust Services</strong> (TLS certificates for all
+                                Google domains).</li>
+                            <li>Automated password change efficiency improved by 75% in Cupcake Gigafactory.</li>
+                            <li>Resolved facebook.com DSL script issue, enabling service for 17% previously unserved
+                                traffic.</li>
+                            <li>Owned Radio Journeys in Assistant (1.5M daily queries, 94% SAI rate).</li>
+                        </ul>
+                    </div>
+
+                    <!-- WorldQuant -->
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <h3 class="role">Quantitative Developer</h3>
+                            <span class="company">Millennium Management (WorldQuant)</span>
+                            <span class="date">Dec 2021 - April 2022</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Implemented highly available <strong>Etcd</strong> cluster in Kubernetes for distributed
+                                locking.</li>
+                            <li>Implemented Storage Infrastructure over Network for Alpha Cache to increase throughput.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Grab -->
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <h3 class="role">Senior Software Engineer</h3>
+                            <span class="company">Grab Holdings Inc.</span>
+                            <span class="date">Aug 2019 - Dec 2021</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Designed secure AMI rollout pipeline for fast automated updates.</li>
+                            <li>Reduced pipeline update runtime from ~45mins to ~3mins.</li>
+                            <li>Fixed role sync issue, reducing sync time from ~14mins to 16s.</li>
+                            <li>Managed K8s cluster and migrated services.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cisco -->
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <h3 class="role">Research Software Engineer Intern</h3>
+                            <span class="company">Cisco Systems (San Jose, US)</span>
+                            <span class="date">Aug 2018 - July 2019</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Designed SDN based Cloud Network Overlay extensions suitable for Enterprise Policy.</li>
+                            <li>Implemented sidecar proxy based VNF for consistent policies in cloud and on-prem.</li>
+                            <li>Implemented fast shared memory IPC for VPP.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Works Applications -->
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <h3 class="role">R&D Software Engineer</h3>
+                            <span class="company">Works Applications Singapore</span>
+                            <span class="date">March 2018 - July 2018</span>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Designed a web application that provides intuitive tools to streamline the candidate
+                                recruitment processes.</li>
+                            <li>Features included auto-evaluation of candidates, finding the optimal assignment of
+                                interviewer and schedule, feedback suite to evaluate the candidate’s performance and
+                                statistics resulting in 5x decrease in recruiting time.</li>
+                            <li>Application developed using Javascript/HTML/CSS with jQuery and bootstrap.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Open Source & Projects</h2>
+                <div class="grid-layout">
+                    <div class="card">
+                        <h3>Spinnaker</h3>
+                        <p>Contributed to improving latency to sync LDAP roles, reducing time from 16 minutes to 14
+                            seconds.</p>
+                        <a href="https://github.com/spinnaker/spinnaker" class="card-link">View Project <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card">
+                        <h3>Zlint</h3>
+                        <p>Added CRL lints to Zlint, a Go-based X.509 certificate linter checking for standard
+                            consistency.</p>
+                        <a href="https://github.com/zmap/zlint" class="card-link">View Project <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="card">
+                        <h3>DigitalOcean/doctl</h3>
+                        <p>Performance improvement in docker image build process.</p>
+                        <a href="https://github.com/digitalocean/doctl" class="card-link">View Project <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3>Languages</h3>
+                        <p>C++, Python, Java, Go, Kotlin, TypeScript, SQL, Dart</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Frameworks & Tools</h3>
+                        <p>Kubernetes, Docker, Pandas, Scikit-learn, Spinnaker, Terraform</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Expertise</h3>
+                        <p>Distributed Systems, Systems Programming, Machine Learning, Algorithms</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="section">
+            <div class="container">
+                <h2 class="section-title">Education & Awards</h2>
+                <div class="grid-layout">
+                    <div class="card">
+                        <h3>BSc Computer Science</h3>
+                        <span class="subtitle">BUET (2013-2017)</span>
+                        <p>CGPA: 3.52/4.00. Relevant modules: Algorithms, OS, Distributed Systems, AI.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Achievements</h3>
+                        <ul class="compact-list">
+                            <li><strong>Google Kickstart</strong>: Rank 34/1156 (Top 2%) - 2017</li>
+                            <li><strong>ACM-ICPC Dhaka</strong>: 2nd Place (2016, 2017)</li>
+                            <li><strong>CodeForces</strong>: Rating 2082 (Top 4%) - Candidate Master</li>
+                            <li><strong>TopCoder</strong>: Rating 1675 (Yellow)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section footer-section">
+            <div class="container text-center">
+                <p>&copy; 2025 Repon Kumar Roy</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

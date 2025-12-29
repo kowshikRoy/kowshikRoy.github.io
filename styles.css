@@ -398,8 +398,23 @@ body {
     border-color: var(--accent-color);
 }
 
-.card h3 {
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
     margin-bottom: 0.75rem;
+}
+
+.project-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    /* optional: background: white; padding: 2px; border-radius: 4px; */
+}
+
+.card h3 {
+    margin: 0;
+    /* Handled by card-header gap and margin-bottom */
     font-size: 1.1rem;
 }
 

@@ -11,7 +11,91 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .tech-stack {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
+        .tooltip-wrapper {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip-wrapper i {
+            transition: color 0.3s ease;
+            display: inline-block;
+            /* Ensure transforms work */
+        }
+
+        .tooltip-wrapper:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 130%;
+            /* Move up slightly */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #1a1a1a;
+            /* Darker background */
+            color: #fff;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            z-index: 1000;
+            /* High z-index */
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+            opacity: 0;
+            /* Animation start */
+            animation: fadeIn 0.2s forwards;
+        }
+
+        .tooltip-wrapper:hover::before {
+            content: '';
+            position: absolute;
+            bottom: 120%;
+            /* Match movement */
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px;
+            border-style: solid;
+            border-color: #1a1a1a transparent transparent transparent;
+            z-index: 1000;
+            opacity: 0;
+            animation: fadeIn 0.2s forwards;
+            pointer-events: none;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Ensure card creates a stacking context if needed */
+        .card {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card:hover {
+            z-index: 10;
+        }
+
+        .card:hover .tooltip-wrapper i {
+            color: var(--accent-color);
+        }
+    </style>
 </head>
 
 <body>
@@ -172,6 +256,10 @@
                             <h3>Clipy</h3>
                         </div>
                         <p>Modern, privacy-focused clipboard manager for macOS with smart categorization and design.</p>
+                        <div class="tech-stack">
+                            <span class="tooltip-wrapper" data-tooltip="Swift"><i class="devicon-swift-plain colored"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="macOS"><i class="devicon-apple-original"></i></span>
+                        </div>
                         <a href="https://github.com/kowshikRoy/clipy" class="card-link">View Project <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
@@ -181,8 +269,12 @@
                             <i class="fas fa-language project-icon"></i>
                             <h3>Takt</h3>
                         </div>
-                        <p>German language learning app with smart POS tagging, bi-directional translation, and case
-                            practice tools.</p>
+                        <p>German language learning app with smart POS tagging. Built with Flutter & SQLite.</p>
+                        <div class="tech-stack">
+                            <span class="tooltip-wrapper" data-tooltip="Flutter"><i class="devicon-flutter-plain colored"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="Dart"><i class="devicon-dart-plain colored"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="SQLite"><i class="devicon-sqlite-plain colored"></i></span>
+                        </div>
                         <a href="https://github.com/kowshikRoy/takt" class="card-link">View Project <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
@@ -192,8 +284,13 @@
                             <i class="fas fa-puzzle-piece project-icon"></i>
                             <h3>Tango</h3>
                         </div>
-                        <p>Logic puzzle game with haptic feedback and interactive grid mechanics. Built with React
-                            Native.</p>
+                        <p>Logic puzzle game with haptic feedback and interactive grid mechanics. Built with React 19 &
+                            Vite.</p>
+                        <div class="tech-stack">
+                            <span class="tooltip-wrapper" data-tooltip="React 19"><i class="devicon-react-original colored"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="TypeScript"><i class="devicon-typescript-plain colored"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="Vite"><i class="devicon-vitejs-plain colored"></i></span>
+                        </div>
                         <a href="https://tango.taitow.com" class="card-link">View Project <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
@@ -203,7 +300,13 @@
                             <i class="fas fa-calculator project-icon"></i>
                             <h3>Equamath</h3>
                         </div>
-                        <p>Mathematical puzzle generator and solver. Analyzes solution uniqueness and solvability.</p>
+                        <p>Mathematical puzzle generator and solver. Analyzes solution uniqueness using custom services.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tooltip-wrapper" data-tooltip="React 19"><i class="devicon-react-original colored"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="TypeScript"><i class="devicon-typescript-plain colored"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="Vite"><i class="devicon-vitejs-plain colored"></i></span>
+                        </div>
                         <a href="https://equamath.taitow.com" class="card-link">View Project <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
@@ -213,7 +316,12 @@
                             <i class="fas fa-book project-icon"></i>
                             <h3>Book Search</h3>
                         </div>
-                        <p>Fast book search engine with SQL backend (FTS5) and optimized frontend performance.</p>
+                        <p>Fast book search engine with SQLite FTS5 backend and Gunicorn/Flask server.</p>
+                        <div class="tech-stack">
+                            <span class="tooltip-wrapper" data-tooltip="Python"><i class="devicon-python-plain colored"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="Flask"><i class="devicon-flask-original colored"></i></span>
+                            <span class="tooltip-wrapper" data-tooltip="SQLite"><i class="devicon-sqlite-plain colored"></i></span>
+                        </div>
                         <a href="https://books.taitow.com" class="card-link">View Project <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
